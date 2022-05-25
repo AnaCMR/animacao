@@ -1,0 +1,70 @@
+.background {
+    /* background-color: #1d3e63; */
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.testando, .testando2 {
+    animation: animate 5s ease 1 forwards reverse;
+    color: #1d1d1d; 
+    margin: 0 auto;
+     
+     /* color: #fff; */
+    /* text-shadow: 0 0 10px #4ed6ff,
+    0 0 20px #4ed6ff,
+    0 0 40px #4ed6ff,
+    0 0 80px #4ed6ff,
+    0 0 160px #4ed6ff; */
+
+}
+
+.testando {
+    font-size: 10rem;
+    margin-left: 5%;
+}
+
+.oie {
+    left: 39%;
+    position: absolute;
+    animation: animate2 1s linear 5s 1 forwards;
+}
+
+.testando2 {
+    font-size: 5rem;
+}
+
+
+
+@keyframes animate {
+    0%, 18%, 20%, 50%, 60%, 65%, 80%,90%, 92%{
+        text-shadow: none;
+        border: none;
+        color: #1d1d1d;
+    }
+    18.1%, 20.1%, 30%, 50.1%, 60.1%, 65.1%, 80.1%, 92.1%, 100% {
+        text-shadow: 0 0 10px #4ed6ff,
+        0 0 20px #4ed6ff,
+        0 0 40px #4ed6ff,
+        0 0 80px #4ed6ff,
+        0 0 160px #4ed6ff;
+        color: #fff;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: translateY(75vh) rotate(-60deg);
+    }
+}
