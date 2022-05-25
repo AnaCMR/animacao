@@ -1,5 +1,5 @@
 import React from "react";
-import './telapreta.css';
+import './banner.css';
 
 const Banner = () => {
     return (

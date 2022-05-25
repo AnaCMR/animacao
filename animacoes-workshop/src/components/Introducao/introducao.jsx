@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './testando.css';
+import './introducao.css';
 
 const Introducao = () => {
     const teste = "{"
@@ -150,7 +150,7 @@ window.addEventListener('scroll', () => {
 <div className="container-conteudo2">
         <h1>JavaScript (ou React)!</h1>
         <p>Muita das vezes precisamos de uma lógica para manipular os elementos que vão conter as nossas animações </p>
-        <p>Por isso, é muito importante aprender aprender a mexer com Scroll ou fazer bom uso de bibliotecas que vão melhorar as nossas transições, por exemplo. </p>
+        <p>Por isso, é muito importante aprender a mexer com Scroll ou fazer bom uso de bibliotecas que vão melhorar as nossas transições, por exemplo. </p>
     </div>
     </div>
     <div className="conteudo5">
@@ -165,7 +165,7 @@ window.addEventListener('scroll', () => {
 
 <div className="container-conteudo5">
         <h1>Muuuita criatividade!</h1>
-        <p>Sabemos que na programação sempre há várias formas de obeter o mesmo resultado. </p>
+        <p>Sabemos que na programação sempre há várias formas de obter o mesmo resultado. </p>
         <p>Então quanto mais buscamos aprender e conhecer aquilo que fazemos, mais conseguimos simplificar nosso código com maneiras mais assertivas e criativas </p>
     </div>
     
