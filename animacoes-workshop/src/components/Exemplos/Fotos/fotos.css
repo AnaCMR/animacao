@@ -1,0 +1,14 @@
+.cssSemAnimacao {
+    width: 200px;
+    height: 100px;
+}
+
+.cssComAnimacao {
+    width: 200px;
+    height: 100px;
+}
+
+.cssComAnimacao:hover {
+    transform: scale(2);
+    z-index: 3;
+}

@@ -14,7 +14,6 @@ const Introducao = () => {
     const [keyframeAnimation1, setKeyframeAnimation1] = useState('')
     const [keyframeAnimation2, setKeyframeAnimation2] = useState('')
     const [imgFogueteAnimate, setImgFogueteAnimate] = useState('')
-    console.log(scroll)
 
 window.addEventListener('scroll', () => {
 
@@ -116,7 +115,7 @@ window.addEventListener('scroll', () => {
 
 <div className="container-conteudo2">
 <h1>Transform!</h1>
-        <p>É com essa propriedade maravilhosa que nós conseguimos mudar a <spam className='rotation'>rotação</spam>, <spam className='position'>posição</spam>, <spam className='escala'>escala</spam> (entre outras muitas coisas) dos elementos. Segue alguns exemplos que combinados com o keyframe fazem milagres:</p>
+        <p>É com essa propriedade maravilhosa que nós conseguimos mudar a <spam className='rotation'>rotação</spam>, <spam className='position'>posição</spam>, <spam className='escala'>escala</spam> (entre outras muitas coisas) dos elementos. Segue um exemplo de como usar o transform </p>
         <p> transform: rotate(45deg) translate(200px, 300px) </p>
 </div>
 </div>
@@ -148,9 +147,10 @@ window.addEventListener('scroll', () => {
 
 
 <div className="container-conteudo2">
-        <h1>JavaScript (ou React)!</h1>
-        <p>Muita das vezes precisamos de uma lógica para manipular os elementos que vão conter as nossas animações </p>
-        <p>Por isso, é muito importante aprender a mexer com Scroll ou fazer bom uso de bibliotecas que vão melhorar as nossas transições, por exemplo. </p>
+        <h1>Transition</h1>
+        <p>Com o transition conseguimos suavizar efeitos, colocando um delay, uma duração e um estilo de animação</p>
+
+        <p>transition: Propriedade duração tempoDeEfeito Delay </p>
     </div>
     </div>
     <div className="conteudo5">
@@ -164,9 +164,9 @@ window.addEventListener('scroll', () => {
 
 
 <div className="container-conteudo5">
-        <h1>Muuuita criatividade!</h1>
-        <p>Sabemos que na programação sempre há várias formas de obter o mesmo resultado. </p>
-        <p>Então quanto mais buscamos aprender e conhecer aquilo que fazemos, mais conseguimos simplificar nosso código com maneiras mais assertivas e criativas </p>
+        <h1>JavaScript (ou React)!</h1>
+        <p>Muita das vezes precisamos de uma lógica para manipular os elementos que vão conter as nossas animações </p>
+        <p>Por isso, é muito importante aprender a mexer com Scroll ou fazer bom uso de bibliotecas que vão melhorar as nossas transições, por exemplo. </p>
     </div>
     
 
