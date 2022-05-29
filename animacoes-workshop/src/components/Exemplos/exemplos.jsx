@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./exemplos.css"
-import Fotos from "./Fotos/fotos";
 
 const Exemplo = () => {
     const [isOpened, setIsOpened] = useState(false)
@@ -9,10 +8,27 @@ const Exemplo = () => {
     const [active2, setActive2] = useState(false);
     const [active3, setActive3] = useState(false);
     const [active4, setActive4] = useState(false);
+    const [translate1, setTranslate1] = useState ("-300px")
+    const [translate2, setTranslate2] = useState ("150px")
+    const [translate3, setTranslate3] = useState ("-150px")
+    const [translate4, setTranslate4] = useState ("300px")
+    const [dayValue, setDayValue] = useState( )
+    const [animationValue, setAnimationValue] = useState( )
+    console.log(dayValue)
+    console.log(animationValue)
+
+
+
     const classActive = active ? "changePageActive" : "changePage"
     const classActive2 = active2 ? "changePageActive" : "changePage"
     const classActive3 = active3 ? "changePageActive" : "changePage"
     const classActive4 = active4 ? "changePageActive" : "changePage"
+
+    const classActiveCard = active ? "menuButtonActive" : translate1
+    const classActive2Card = active2 ? "arrowButtonActive" : translate2
+    const classActive3Card = active3 ? "iconsActive" : translate3
+    const classActive4Card = active4 ? "toggleButtonsActive" : translate4
+
     const cssOpened = isOpened ? "menuOpened" : "menuClosed"
    const line1Opened = isOpened ? "line1Animation" : ""
    const line2Opened = isOpened ? "line2Animation" : ""
@@ -43,7 +59,38 @@ const Exemplo = () => {
         <p className="exemplos">Vamos ver alguns exemplos?</p>
         </div>
         <div className="exemplosContainer">
-        <div className="menuContainer">
+        <svg className="leftArrow"
+        onClick={() => {
+            if(active){
+                setActive(false)
+                setActive2(false)
+                setActive3(false)
+                setActive4(true)
+                setTranslate4("-300px")
+            } else if(active2){
+                setActive(true)
+                setActive2(false)
+                setActive3(false)
+                setActive4(false)
+            }
+            else if(active3){
+                setActive(false)
+                setActive2(true)
+                setActive3(false)
+                setActive4(false)
+            } else {
+                setActive(false)
+                setActive2(false)
+                setActive3(true)
+                setActive4(false)
+            }
+        
+        }} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.1787 12.5607C12.7645 11.9749 12.7645 11.0251 12.1787 10.4393L2.63274 0.893398C2.04696 0.307612 1.09721 0.307612 0.511424 0.893398C-0.0743629 1.47918 -0.0743629 2.42893 0.511424 3.01472L8.9967 11.5L0.511424 19.9853C-0.0743629 20.5711 -0.0743629 21.5208 0.511424 22.1066C1.09721 22.6924 2.04696 22.6924 2.63274 22.1066L12.1787 12.5607ZM8.88196 13H11.118V10H8.88196V13Z" fill="#179cc9"/>
+</svg>
+
+
+        <div className={`menuContainer`} style={{transform: `translateX(${classActiveCard})`}}>
             <div className="menuContainer2">
         <div onClick={() => 
             setIsOpened(!isOpened)
@@ -88,7 +135,7 @@ const Exemplo = () => {
             </div>
             </div>
         </div>
-        <div className="menuContainer">
+        <div className={`menuContainer`} style={{transform: `translateX(${classActive2Card})`}}>
        
         <spam className="spam-click comAnimacaoSeta">Veja abaixo <svg className="seta setaAnimada" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L50 52.5L96.5 1" stroke="white" stroke-width="10"/>
@@ -99,19 +146,48 @@ const Exemplo = () => {
 </svg>
 </spam>
 </div>
-<div className="menuContainer">
+<div className={`menuContainer`} style={{transform: `translateX(${classActive3Card})`}} >
 <div className="loading"></div>
-     </div>
-<div className="menuContainer">
-        <spam className="spam-click comAnimacaoSeta">Veja abaixo <svg className="seta setaAnimada" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L50 52.5L96.5 1" stroke="white" stroke-width="10"/>
+<div className="download"><svg width="44" height="53" viewBox="0 0 24 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.9393 32.0607C11.5251 32.6464 12.4749 32.6464 13.0607 32.0607L22.6066 22.5147C23.1924 21.9289 23.1924 20.9792 22.6066 20.3934C22.0208 19.8076 21.0711 19.8076 20.4853 20.3934L12 28.8787L3.51472 20.3934C2.92893 19.8076 1.97918 19.8076 1.3934 20.3934C0.807612 20.9792 0.807612 21.9289 1.3934 22.5147L10.9393 32.0607ZM10.5 0L10.5 31H13.5L13.5 0L10.5 0Z" fill="#222222"/>
 </svg>
-</spam>
-<spam className="spam-click semAnimacao">Veja abaixo <svg className="seta" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L50 52.5L96.5 1" stroke="white" stroke-width="10"/>
-</svg>
-</spam>
+
+
 </div>
+<div className="loadingStatus"><div className="loadingLine"></div></div>
+     </div>
+<div className="menuContainer" style={{transform: `translateX(${classActive4Card})`}}>
+        <input type="checkbox" onChange={({target}) => setDayValue(target.value)} className="day"/>
+        <input type="checkbox" onChange={({target}) => setAnimationValue(target.value)} className="onOff"/>
+</div>
+<svg className="rightArrow" 
+onClick={() => {
+    if(active){
+        setActive(false)
+        setActive2(true)
+        setActive3(false)
+        setActive4(false)
+    } else if(active2){
+        setActive(false)
+        setActive2(false)
+        setActive3(true)
+        setActive4(false)
+    }
+    else if(active3){
+        setActive(false)
+        setActive2(false)
+        setActive3(false)
+        setActive4(true)
+    } else {
+        setActive(true)
+        setActive2(false)
+        setActive3(false)
+        setActive4(false)
+    }
+
+}} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.1787 12.5607C12.7645 11.9749 12.7645 11.0251 12.1787 10.4393L2.63274 0.893398C2.04696 0.307612 1.09721 0.307612 0.511424 0.893398C-0.0743629 1.47918 -0.0743629 2.42893 0.511424 3.01472L8.9967 11.5L0.511424 19.9853C-0.0743629 20.5711 -0.0743629 21.5208 0.511424 22.1066C1.09721 22.6924 2.04696 22.6924 2.63274 22.1066L12.1787 12.5607ZM8.88196 13H11.118V10H8.88196V13Z" fill="#179cc9"/>
+</svg>
 </div>
 <div className="navigationContainer">
             <div onClick={() => {

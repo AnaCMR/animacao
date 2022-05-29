@@ -72,27 +72,23 @@
     stroke-dashoffset: 0;
     display: flex;
     justify-self: left;
-    margin-left: -150px;
+    margin-left: -170px;
     visibility: hidden;
     
 }
 
 .numero4-fill{
     visibility: hidden;
-    margin-left: -150px;
+    margin-left: -170px;
     stroke-dasharray: 4700;
     stroke-dashoffset: 0;
 }
 
 .numero5-fill {
     width: 100px;
-    margin-left: -260px;
+    margin-left: -320px;
     stroke-dasharray: 4700;
     stroke-dashoffset: 0;
-}
-
-.numero3-fill {
-    margin-left: -140px;
 }
 
 .numero1-fill-animation, .numero2-fill-animation, .numero3-fill-animation {
@@ -165,9 +161,9 @@
 .imgFoguete {
     position: absolute; 
         left: 200px;
-        margin-top: 5%;
+        margin-top: 3%;
         transform: rotate(-45deg);
-        width: 20%;
+        width: 18%;
     
 }
 
