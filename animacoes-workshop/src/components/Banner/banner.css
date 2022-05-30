@@ -5,7 +5,7 @@
     background-color: #000;
 }
 
-.testando, .testando2 {
+.errorNumber, .errorPhrase {
     animation: animate 5s ease 1 forwards reverse;
     color: #1d1d1d; 
     margin: 0 auto;
@@ -19,19 +19,19 @@
 
 }
 
-.testando {
+.errorNumber {
     font-size: 10rem;
     margin-left: 5%;
 }
 
-.oie {
+.differentLetter {
     left: 39%;
     position: absolute;
     animation: animate2 1s linear 5s 1 forwards;
     background-color: transparent;
 }
 
-.testando2 {
+.errorPhrase {
     font-size: 5rem;
 }
 

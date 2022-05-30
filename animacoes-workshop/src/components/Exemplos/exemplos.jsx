@@ -105,7 +105,7 @@ const Exemplo = () => {
 </svg>
 
 
-        <div className={`menuContainer ${classActive1Card}`} style={{transform: `${translate1}`, opacity: "0.4"}}>
+        <div className={`menuContainer ${classActive1Card}`} style={{transform: `${translate1}`}}>
             <div className="menuContainer2">
         <div onClick={() => 
             setIsOpened(!isOpened)
@@ -150,7 +150,7 @@ const Exemplo = () => {
             </div>
             </div>
         </div>
-        <div className={`menuContainer ${classActive2Card}`} style={{transform:  `${translate2}`, opacity: "0.4"}}>
+        <div className={`menuContainer ${classActive2Card}`} style={{transform:  `${translate2}`}}>
        
         <span className="span-click comAnimacaoSeta">Veja abaixo <svg className="seta setaAnimada" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L50 52.5L96.5 1" stroke="white" stroke-width="10"/>
@@ -161,7 +161,7 @@ const Exemplo = () => {
 </svg>
 </span>
 </div>
-<div className={`menuContainer ${classActive3Card}`} style={{transform:  `${translate3}`, opacity: "0.4"}} >
+<div className={`menuContainer ${classActive3Card}`} style={{transform:  `${translate3}`}} >
 <div className="loading"></div>
 <div className="download"><svg width="44" height="53" viewBox="0 0 24 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.9393 32.0607C11.5251 32.6464 12.4749 32.6464 13.0607 32.0607L22.6066 22.5147C23.1924 21.9289 23.1924 20.9792 22.6066 20.3934C22.0208 19.8076 21.0711 19.8076 20.4853 20.3934L12 28.8787L3.51472 20.3934C2.92893 19.8076 1.97918 19.8076 1.3934 20.3934C0.807612 20.9792 0.807612 21.9289 1.3934 22.5147L10.9393 32.0607ZM10.5 0L10.5 31H13.5L13.5 0L10.5 0Z" fill="#222222"/>
@@ -171,7 +171,7 @@ const Exemplo = () => {
 </div>
 <div className="loadingStatus"><div className="loadingLine"></div></div>
      </div>
-<div className={`menuContainer ${classActive4Card}`} style={{transform:  `${translate4}`, opacity: "0.4"}}>
+<div className={`menuContainer ${classActive4Card}`} style={{transform:  `${translate4}`}}>
         <input type="checkbox" onChange={({target}) => setDayValue(target.value)} className="day"/>
         <input type="checkbox" onChange={({target}) => setAnimationValue(target.value)} className="onOff"/>
 </div>
