@@ -28,6 +28,7 @@
     left: 41%;
     position: absolute;
     animation: animate2 1s linear 5s 1 forwards;
+    background-color: transparent;
 }
 
 .testando2 {

@@ -1,0 +1,123 @@
+.conselhos-bg {
+    color: #a5a5a5;
+}
+
+.conselhos-bg h2 {
+    font-size: 3rem;
+}
+
+.conselhos-bg p {
+    font-size: 1.5rem;
+}
+
+.conselhosHeader h2 {
+    
+    margin: 10% 10% 0 10%;
+    /* text-align: left; */
+}
+
+.conselhosHeader p {
+    color: #a5a5a5;
+    /* text-align: left; */
+    margin: 2% 10%;
+}
+
+.conselhosLine {
+    position: absolute;
+    margin: 0 auto;
+    left: 270px;
+    stroke-dashoffset: 4000;
+    stroke-dasharray: 4000;
+}
+
+.animarConselho{
+    stroke-dashoffset: 4000;
+    stroke-dasharray: 4000;
+    animation: linhaConselho 30s linear forwards;
+    
+}
+
+.animarCirculo {
+    stroke-dashoffset: 4000;
+    stroke-dasharray: 4000;
+    animation: linhaConselho 10s linear 30s forwards;
+}
+
+.pontos {
+    text-align: left;
+    color: #F41D91;
+}
+
+.conselhos {
+    /* border: 2px solid red; */
+    color: #a5a5a5;
+    margin: 9% 17%;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 400px;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.conselhos p::before {
+    content: '';
+    width: 25px;
+    height: 15px;
+    background-color: #ffff008e;
+    position: absolute;
+    left: 270px;
+    margin-top: 8px;
+    /* border-radius: 50%; */
+}
+
+.sites {
+    /* border: 2px solid red; */
+    width: 35%;
+    height: 350px;
+    position: relative;
+    left: 880px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sites h2 {
+    color: #FF7A00;
+}
+
+.sites a{
+    text-decoration: none;
+    color: #a5a5a5;
+    font-size: 1.5rem;
+    /* border: 2px solid blue; */
+    text-align: left;
+    width: 40%;
+    margin-left: 40%;
+}
+    
+
+
+.sites a::before{
+    content: '';
+    width: 25px;
+    height: 15px;
+    background-color: #00c3ff8e;
+    position: absolute;
+    right: 410px;
+    margin-top: 8px;
+}
+
+.sites a:hover {
+    border-bottom: 2px solid #F41D91;
+}
+
+@keyframes linhaConselho {
+    from {
+        stroke-dashoffset: 4000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

@@ -24,10 +24,10 @@ const Exemplo = () => {
     const classActive3 = active3 ? "changePageActive" : "changePage"
     const classActive4 = active4 ? "changePageActive" : "changePage"
 
-    const classActiveCard = active ? "menuButtonActive" : translate1
-    const classActive2Card = active2 ? "arrowButtonActive" : translate2
-    const classActive3Card = active3 ? "iconsActive" : translate3
-    const classActive4Card = active4 ? "toggleButtonsActive" : translate4
+    const classActive1Card = active ? "menuButtonActive" : ""
+    const classActive2Card = active2 ? "arrowButtonActive" : ""
+    const classActive3Card = active3 ? "iconsActive" : ""
+    const classActive4Card = active4 ? "toggleButtonsActive" : ""
 
     const cssOpened = isOpened ? "menuOpened" : "menuClosed"
    const line1Opened = isOpened ? "line1Animation" : ""
@@ -66,23 +66,38 @@ const Exemplo = () => {
                 setActive2(false)
                 setActive3(false)
                 setActive4(true)
-                setTranslate4("-300px")
+                setTranslate4("translateX(0)")
+                setTranslate3('translateX(150px) scale(1)')
+                setTranslate2('translateX(300px) scale(0.8)')
+                setTranslate1('translateX(-300px) scale(1)')
             } else if(active2){
                 setActive(true)
                 setActive2(false)
                 setActive3(false)
                 setActive4(false)
+                setTranslate4('translateX(150px) scale(1)')
+                setTranslate3('translateX(300px) scale(0.8)')
+                setTranslate2('translateX(-300px) scale(1)')
+                setTranslate1("translateX(0)")
             }
             else if(active3){
                 setActive(false)
                 setActive2(true)
                 setActive3(false)
                 setActive4(false)
+                setTranslate4('translateX(300px) scale(0.8)')
+                setTranslate3("translateX(-300px) scale(1)")
+                setTranslate2("translateX(0)")
+                setTranslate1("translateX(150px) scale(1)")
             } else {
                 setActive(false)
                 setActive2(false)
                 setActive3(true)
                 setActive4(false)
+                setTranslate4('translateX(-300px) scale(1)')
+                    setTranslate3("translateX(0)")
+                    setTranslate2('translateX(150px) scale(1)')
+                    setTranslate1('translateX(300px) scale(0.8)')
             }
         
         }} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +105,7 @@ const Exemplo = () => {
 </svg>
 
 
-        <div className={`menuContainer`} style={{transform: `translateX(${classActiveCard})`}}>
+        <div className={`menuContainer ${classActive1Card}`} style={{transform: `${translate1}`, opacity: "0.4"}}>
             <div className="menuContainer2">
         <div onClick={() => 
             setIsOpened(!isOpened)
@@ -135,18 +150,18 @@ const Exemplo = () => {
             </div>
             </div>
         </div>
-        <div className={`menuContainer`} style={{transform: `translateX(${classActive2Card})`}}>
+        <div className={`menuContainer ${classActive2Card}`} style={{transform:  `${translate2}`, opacity: "0.4"}}>
        
-        <spam className="spam-click comAnimacaoSeta">Veja abaixo <svg className="seta setaAnimada" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <span className="span-click comAnimacaoSeta">Veja abaixo <svg className="seta setaAnimada" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L50 52.5L96.5 1" stroke="white" stroke-width="10"/>
 </svg>
-</spam>
-<spam className="spam-click semAnimacao">Veja abaixo <svg className="seta" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+</span>
+<span className="span-click semAnimacao">Veja abaixo <svg className="seta" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L50 52.5L96.5 1" stroke="white" stroke-width="10"/>
 </svg>
-</spam>
+</span>
 </div>
-<div className={`menuContainer`} style={{transform: `translateX(${classActive3Card})`}} >
+<div className={`menuContainer ${classActive3Card}`} style={{transform:  `${translate3}`, opacity: "0.4"}} >
 <div className="loading"></div>
 <div className="download"><svg width="44" height="53" viewBox="0 0 24 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.9393 32.0607C11.5251 32.6464 12.4749 32.6464 13.0607 32.0607L22.6066 22.5147C23.1924 21.9289 23.1924 20.9792 22.6066 20.3934C22.0208 19.8076 21.0711 19.8076 20.4853 20.3934L12 28.8787L3.51472 20.3934C2.92893 19.8076 1.97918 19.8076 1.3934 20.3934C0.807612 20.9792 0.807612 21.9289 1.3934 22.5147L10.9393 32.0607ZM10.5 0L10.5 31H13.5L13.5 0L10.5 0Z" fill="#222222"/>
@@ -156,7 +171,7 @@ const Exemplo = () => {
 </div>
 <div className="loadingStatus"><div className="loadingLine"></div></div>
      </div>
-<div className="menuContainer" style={{transform: `translateX(${classActive4Card})`}}>
+<div className={`menuContainer ${classActive4Card}`} style={{transform:  `${translate4}`, opacity: "0.4"}}>
         <input type="checkbox" onChange={({target}) => setDayValue(target.value)} className="day"/>
         <input type="checkbox" onChange={({target}) => setAnimationValue(target.value)} className="onOff"/>
 </div>
@@ -167,22 +182,38 @@ onClick={() => {
         setActive2(true)
         setActive3(false)
         setActive4(false)
+        setTranslate4('translateX(300px) scale(0.8)')
+                setTranslate3("translateX(-300px) scale(1)")
+                setTranslate2("translateX(0)")
+                setTranslate1("translateX(150px) scale(1)")
     } else if(active2){
         setActive(false)
         setActive2(false)
         setActive3(true)
         setActive4(false)
+        setTranslate4('translateX(-300px) scale(1)')
+                setTranslate3("translateX(0)")
+                setTranslate2('translateX(150px) scale(1)')
+                setTranslate1('translateX(300px) scale(0.8)')
     }
     else if(active3){
         setActive(false)
         setActive2(false)
         setActive3(false)
         setActive4(true)
+        setTranslate4("translateX(0)")
+                setTranslate3('translateX(150px) scale(1)')
+                setTranslate2('translateX(300px) scale(0.8)')
+                setTranslate1('translateX(-300px) scale(1)')
     } else {
         setActive(true)
         setActive2(false)
         setActive3(false)
         setActive4(false)
+        setTranslate4('translateX(150px) scale(1)')
+                setTranslate3('translateX(300px) scale(0.8)')
+                setTranslate2('translateX(-300px) scale(1)')
+                setTranslate1("translateX(0)")
     }
 
 }} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,125 +225,46 @@ onClick={() => {
                 setActive(true)
                 setActive2(false)
                 setActive3(false)
-                    setActive4(false)}} className={classActive}></div>
+                    setActive4(false)
+                    setTranslate4('translateX(150px) scale(1)')
+                setTranslate3('translateX(300px) scale(0.8)')
+                setTranslate2('translateX(-300px) scale(1)')
+                setTranslate1("translateX(0)")}} className={classActive}></div>
                 <div  onClick={() => {
                     setActive2(true)
                     setActive(false)
                     setActive3(false)
                     setActive4(false)
+                    setTranslate4('translateX(300px) scale(0.8)')
+                setTranslate3("translateX(-300px) scale(1)")
+                setTranslate2("translateX(0)")
+                setTranslate1("translateX(150px) scale(1)")
                     }} className={classActive2}></div>
            
         <div onClick={() => {
     setActive(false)
     setActive2(false)
     setActive3(true)
-                    setActive4(false)}} className={classActive3}></div>
+                    setActive4(false)
+                    setTranslate4('translateX(-300px) scale(1)')
+                    setTranslate3("translateX(0)")
+                    setTranslate2('translateX(150px) scale(1)')
+                    setTranslate1('translateX(300px) scale(0.8)')}
+                    } className={classActive3}></div>
                 <div  onClick={() => {
                     setActive2(false)
                     setActive(false)
                     setActive3(false)
                     setActive4(true)
+                    setTranslate4("translateX(0)")
+                    setTranslate3('translateX(150px) scale(1)')
+                    setTranslate2('translateX(300px) scale(0.8)')
+                    setTranslate1('translateX(-300px) scale(1)')
                 }} className={classActive4  }></div>
                 </div>
            
         
-{/* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <h1> Mas porque é importante usar animações?</h1>
-        
-        
-        <p> Porque elas estão em todo lugar, mesmo que a gente não perceba.</p>
-        <p> Essas são as chamadas microanimações:</p>
-
-        <div className="telinhaBG">
-            <div className="telinhaContainer">
-            <div className="telinhaAnimada">
-                <div className="menu"> 
-                    <div className="menuIcon" onClick={() => setIsOpened(!isOpened)} width="91" height="61" viewBox="0 0 91 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <div className="line1"></div>
-                    <div className="line2"></div>
-                    <div className="line3"></div>
-                    </div>
-                   {/* <div className={classOpened}>
-                    <ul>
-                        <li>
-                            item1
-                        </li>
-                        <li>
-                        item2
-                        </li>
-                    </ul>
-                    </div> 
-                </div>
-                
-                <spam className="spam-click">Veja abaixo <svg className="seta setaAnimada" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L50 52.5L96.5 1" stroke="black" stroke-width="10"/>
-</svg>
-</spam>
-
-                <div className="foto-carrossel">
-            <Fotos animado={true}/>
-            </div>
-<spam className="buttonChange corAnimada">Mudando de cor</spam>
-            </div>
-            </div>
-            
-
-
-
-
-
-
-
-        <div className="div-container-click">
-        <spam className="spam-click">Veja abaixo <svg className="seta" width="98" height="54" viewBox="0 0 98 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L50 52.5L96.5 1" stroke="black" stroke-width="10"/>
-</svg>
-</spam>
-        
-        </div>
-        <div className="div-container-click">
-            <spam className="spam-click tamanhoDesanimado">Aumentando de tamanho</spam>
-            <spam className="spam-click tamanhoAnimado">Aumentando de tamanho</spam>
-        </div>
-        <div className="div-container-click">
-            <spam className="spam-click corDesanimada">Mudando de cor</spam>
-           
-        </div>
-        <div className="div-fotos">
-            <div className="div-fotos-container">
-
-            <p>Fotos bonitas</p>
-            <div className="foto-carrossel">
-            <Fotos/>
-            </div>
-            </div>
-        </div>
-                */}
+ 
                 </div>
         
     )
