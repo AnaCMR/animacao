@@ -158,15 +158,16 @@ font-size: 1.2rem;
     visibility: visible;
     background-color: #686868;
     color: black;
-    padding: 2%;
-    width: 211px;
+    padding: 1%;
+    width: 215px;
     text-align: left;
 }
 
 .menuOpened li, .menuOpened2 li{
     background-color: #686868;
-    padding: 20px;
+    padding: 15px;
     list-style: none;
+    width: 185px;
    
 }
 
@@ -194,7 +195,7 @@ color: #a5a5a5;
     width: 20px;
     height: 20px;
     position: absolute;
-    margin-left: 0.5%;
+    margin-left: 5%;
 }   
 
 .span-click {
@@ -240,7 +241,7 @@ color: #a5a5a5;
 .navigationContainer {
     display: flex;
     width: 7%;
-    margin: 5% auto;
+    margin: 10% auto;
     justify-content: space-around;
 }
 
@@ -305,8 +306,8 @@ color: #a5a5a5;
 }
 
 .day, .onOff {
-    width: 200px;
-    height: 100px;
+    width: 150px;
+    height: 70px;
     appearance: none;
   
     border-radius: 50px;
@@ -315,6 +316,7 @@ color: #a5a5a5;
 }
 
 .day{
+    margin-top: 15%;
     background-image: url(https://img.freepik.com/vetores-gratis/noite-estrelada-no-vale-com-arvores-e-montanha_116220-69.jpg);
     transition: 1.2s;
 }
@@ -338,8 +340,8 @@ color: #a5a5a5;
 
 .onOff::after{
     content: '';
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: #fff;
     border-radius: 50px;
     position: absolute;
@@ -350,12 +352,12 @@ color: #a5a5a5;
     transition: 1s;
 }
 .onOff:checked::after {
-    right: 100px;
+    right: 80px;
 }
 .day::before{
     content: '';
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: #fff;
     border-radius: 50px;
     position: absolute;
@@ -366,7 +368,7 @@ color: #a5a5a5;
     transition: 1s;
 }
 .day:checked::before {
-    left: 100px;
+    left: 85px;
     transition: 1s;
 }
 

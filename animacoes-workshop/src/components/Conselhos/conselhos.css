@@ -1,5 +1,6 @@
 .conselhos-bg {
     color: #a5a5a5;
+    margin-top: 300px;
 }
 
 .conselhos-bg h2 {
@@ -7,7 +8,7 @@
 }
 
 .conselhos-bg p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .conselhosHeader h2 {
@@ -25,7 +26,7 @@
 .conselhosLine {
     position: absolute;
     margin: 0 auto;
-    left: 270px;
+    left: 100px;
     stroke-dashoffset: 4000;
     stroke-dasharray: 4000;
 }
@@ -33,14 +34,18 @@
 .animarConselho{
     stroke-dashoffset: 4000;
     stroke-dasharray: 4000;
-    animation: linhaConselho 30s linear forwards;
+    animation: linhaConselho 40s linear forwards;
     
 }
 
+.animarCirculo1 {
+    stroke-dashoffset: 4000;
+    stroke-dasharray: 4000;
+}
 .animarCirculo {
     stroke-dashoffset: 4000;
     stroke-dasharray: 4000;
-    animation: linhaConselho 10s linear 30s forwards;
+    animation: linhaConselho 20s linear 40s forwards;
 }
 
 .pontos {
@@ -51,7 +56,7 @@
 .conselhos {
     /* border: 2px solid red; */
     color: #a5a5a5;
-    margin: 9% 17%;
+    margin: 11% 17%;
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -66,17 +71,17 @@
     height: 15px;
     background-color: #ffff008e;
     position: absolute;
-    left: 270px;
+    left: 200px;
     margin-top: 8px;
     /* border-radius: 50%; */
 }
 
 .sites {
     /* border: 2px solid red; */
-    width: 35%;
+    width: 40%;
     height: 350px;
     position: relative;
-    left: 880px;
+    left: 750px;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -93,7 +98,7 @@
     font-size: 1.5rem;
     /* border: 2px solid blue; */
     text-align: left;
-    width: 40%;
+    width: 50%;
     margin-left: 40%;
 }
     

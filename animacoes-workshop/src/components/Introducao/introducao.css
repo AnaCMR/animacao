@@ -60,7 +60,7 @@
     width: 100px;
     display: flex;
     justify-self: left;
-    background-color: transparent;
+    
 }
 
 .numero3 {
@@ -72,23 +72,27 @@
     stroke-dashoffset: 0;
     display: flex;
     justify-self: left;
-    margin-left: -170px;
+    margin-left: -150px;
     visibility: hidden;
     
 }
 
 .numero4-fill{
     visibility: hidden;
-    margin-left: -170px;
+    margin-left: -150px;
     stroke-dasharray: 4700;
     stroke-dashoffset: 0;
 }
 
 .numero5-fill {
     width: 100px;
-    margin-left: -320px;
+    margin-left: -260px;
     stroke-dasharray: 4700;
     stroke-dashoffset: 0;
+}
+
+.numero3-fill {
+    margin-left: -140px;
 }
 
 .numero1-fill-animation, .numero2-fill-animation, .numero3-fill-animation {
@@ -161,9 +165,9 @@
 .imgFoguete {
     position: absolute; 
         left: 200px;
-        margin-top: 3%;
+        margin-top: 5%;
         transform: rotate(-45deg);
-        width: 18%;
+        width: 20%;
     
 }
 
@@ -172,35 +176,32 @@
 }
 
 .blink {
-    right: 419px;
+    right: 340px;
     /* border: 2px solid blue; */
     margin-top: 105px;
     z-index: 1;
     position: absolute;
     animation: piscar 1s linear 1s infinite alternate;
-    background-color: transparent;
 
 }
 
 .arms {
-    right: 540px;
+    right: 468px;
     margin-top: 5%;
     position: absolute;
     animation: moove 0.8s linear infinite alternate;
-    background-color: transparent;
 }
 .ideia {
     margin: -3% 0 0 0;
-    right: 540px;
+    right: 480px;
     position: absolute;
-    background-color: transparent;
 }
 
 .luz {
     border-radius: 50%;
     animation: light 5s linear infinite alternate;
     margin: -3% 0 0 0;
-    right: 544px;
+    right: 485px;
     position: absolute;
     height: 40px;
     width: 40px;
