@@ -156,7 +156,7 @@ font-size: 1.2rem;
 
 .menuOpened, .menuOpened2{
     visibility: visible;
-    background-color: #686868;
+    background-color: #222222;
     color: black;
     padding: 1%;
     width: 215px;
@@ -167,8 +167,15 @@ font-size: 1.2rem;
     background-color: #686868;
     padding: 15px;
     list-style: none;
-    width: 185px;
-   
+    
+}
+.menuOpened li{
+
+    animation: testeMenuLi 2s ease 1 forwards;
+}
+.menuOpened ul{
+    background-color: #222222;
+    height: inherit;
 }
 
 .menuOpened2:hover, .menuOpened:hover {
@@ -187,6 +194,22 @@ color: #a5a5a5;
 
 .menuOpened li:first-child, .menuOpened2 li:first-child {
     border-bottom: 2px solid #525252;
+}
+
+.menuOpened {
+    
+    overflow: hidden;
+}
+@keyframes testeMenuLi {
+    0% {
+        transform: translateY(-70px);
+        height: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        height: 20px;
+    }
 }
 .setaAnimada {
     animation: setinha 0.5s linear infinite alternate;
