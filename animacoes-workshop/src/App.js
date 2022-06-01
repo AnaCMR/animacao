@@ -4,6 +4,7 @@ import Exemplo from './components/Exemplos/exemplos';
 import Banner from './components/Banner/banner';
 import Introducao from './components/Introducao/introducao';
 import Conselhos from './components/Conselhos/conselhos';
+import Thanks from './components/Agradecimentos/thanks';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Introducao/>
       <Exemplo/>
       <Conselhos/>
+      <Thanks/>
     </div>
   );
 }
