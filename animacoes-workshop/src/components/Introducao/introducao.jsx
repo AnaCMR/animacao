@@ -16,6 +16,7 @@ const Introducao = () => {
     const [keyframeAnimation2, setKeyframeAnimation2] = useState('')
     const [imgFogueteAnimate, setImgFogueteAnimate] = useState('')
 
+
 window.addEventListener('scroll', () => {
 
     setScroll(document.documentElement.scrollTop + document.body.scrollTop)

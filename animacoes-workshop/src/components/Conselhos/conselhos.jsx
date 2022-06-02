@@ -9,8 +9,6 @@ const Conselhos = () => {
     window.addEventListener('scroll', () => {
         const vendoScroll = (document.documentElement.scrollTop + document.body.scrollTop)
 
-       console.log(vendoScroll)
-
         if (vendoScroll >= 4200){
             setAnimarLinha("animarConselho")
             setAnimarCirculo("animarCirculo")

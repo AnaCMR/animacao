@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CuteDollScared from "../SVG-CuteDoll/cuteDollScared";
 import "./exemplos.css"
 
 const Exemplo = () => {
@@ -12,13 +13,11 @@ const Exemplo = () => {
     const [translate2, setTranslate2] = useState ("150px")
     const [translate3, setTranslate3] = useState ("-150px")
     const [translate4, setTranslate4] = useState ("300px")
-    const [dayValue, setDayValue] = useState( )
+    const [dayValue, setDayValue] = useState(false)
     const [animationValue, setAnimationValue] = useState( )
-    console.log(dayValue)
-    console.log(animationValue)
 
-
-
+ const isWhite = dayValue ? "#fff" : "transparent" 
+    
     const classActive = active ? "changePageActive" : "changePage"
     const classActive2 = active2 ? "changePageActive" : "changePage"
     const classActive3 = active3 ? "changePageActive" : "changePage"
@@ -37,7 +36,7 @@ const Exemplo = () => {
 
     return (
         
-        <div className="exemplos-bg">
+        <div className="exemplos-bg" style={{backgroundColor: `${isWhite}`}}>
             <div className="containerMoove">
         <div className="part1"></div>
         <div className="part2"></div>
@@ -172,7 +171,7 @@ const Exemplo = () => {
 <div className="loadingStatus"><div className="loadingLine"></div></div>
      </div>
 <div className={`menuContainer ${classActive4Card}`} style={{transform:  `${translate4}`}}>
-        <input type="checkbox" onChange={({target}) => setDayValue(target.value)} className="day"/>
+        <input type="checkbox" onChange={({target}) => setDayValue(!dayValue)} className="day"/>
         <input type="checkbox" onChange={({target}) => setAnimationValue(target.value)} className="onOff"/>
 </div>
 <svg className="rightArrow" 
@@ -263,7 +262,9 @@ onClick={() => {
                 }} className={classActive4  }></div>
                 </div>
            
-        
+                {dayValue &&
+                <CuteDollScared isWhiteBG={true}/>
+                }
  
                 </div>
         
