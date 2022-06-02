@@ -14,7 +14,6 @@ const Exemplo = () => {
     const [translate3, setTranslate3] = useState ("-150px")
     const [translate4, setTranslate4] = useState ("300px")
     const [dayValue, setDayValue] = useState(false)
-    const [animationValue, setAnimationValue] = useState( )
 
  const isWhite = dayValue ? "#fff" : "transparent" 
     
@@ -172,7 +171,7 @@ const Exemplo = () => {
      </div>
 <div className={`menuContainer ${classActive4Card}`} style={{transform:  `${translate4}`}}>
         <input type="checkbox" onChange={({target}) => setDayValue(!dayValue)} className="day"/>
-        <input type="checkbox" onChange={({target}) => setAnimationValue(target.value)} className="onOff"/>
+        <input type="checkbox" className="onOff"/>
 </div>
 <svg className="rightArrow" 
 onClick={() => {

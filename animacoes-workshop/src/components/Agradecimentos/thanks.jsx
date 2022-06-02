@@ -10,15 +10,16 @@ const Thanks = () => {
             setBg(value)
 
         }
-        console.log(value)
     })
 
     return(
         <>
         <div className='bodyBG'>
         <div className='circle'>
-            <img src='https://brasilnativas.com.br/wp-content/uploads/2021/02/azaleia-600x600-1.jpg'/>
-        <div className='bg' style={{backgroundSize:  `${100 + (bg - 5500)*2}px`}}></div>
+            <div className='circleContainer'>
+            <img src='rv-logo.png'/>
+            </div>
+        <div className='bg' style={{backgroundSize:  `${100 + (bg - 6000)*2}px`}}></div>
         </div>
         </div>
         </>

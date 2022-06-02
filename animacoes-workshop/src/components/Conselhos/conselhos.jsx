@@ -26,7 +26,7 @@ const Conselhos = () => {
             </div>
 
             <svg className={`conselhosLine `} width="1262" height="1864" viewBox="0 0 1262 1864" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path className={`animarCirculo1 ${animarCirculo}`} d="M859 1629C859 1757.72 756.881 1862 631 1862C505.119 1862 403 1757.72 403 1629C403 1500.28 505.119 1396 631 1396C756.881 1396 859 1500.28 859 1629Z" stroke="#A5A5A5" stroke-width="4"/>
+{/* <path className={`animarCirculo1 ${animarCirculo}`} d="M859 1629C859 1757.72 756.881 1862 631 1862C505.119 1862 403 1757.72 403 1629C403 1500.28 505.119 1396 631 1396C756.881 1396 859 1500.28 859 1629Z" stroke="#A5A5A5" stroke-width="4"/> */}
 <path className={ ` ${animarLinha}`} d="M627.75 0V135H3V529.5H627.75V683H1259.5V1071H627.75V1394.5" stroke="#A5A5A5" stroke-width="5"/>
 </svg>
 <div className="conselhos">
