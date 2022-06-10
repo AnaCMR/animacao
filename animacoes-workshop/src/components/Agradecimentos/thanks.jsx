@@ -17,7 +17,7 @@ const Thanks = () => {
         <div className='bodyBG'>
         <div className='circle'>
             <div className='circleContainer'>
-            <img src='rv-logo.png'/>
+            <img src='thanks.png'/>
             </div>
         <div className='bg' style={{backgroundSize:  `${100 + (bg - 6000)*2}px`}}></div>
         </div>
