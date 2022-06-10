@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Dots from "../Navigation/Dots/dots";
 import CuteDollScared from "../SVG-CuteDoll/cuteDollScared";
 import "./exemplos.css"
 
@@ -9,18 +10,16 @@ const Exemplo = () => {
     const [active2, setActive2] = useState(false);
     const [active3, setActive3] = useState(false);
     const [active4, setActive4] = useState(false);
-    const [translate1, setTranslate1] = useState ("-300px")
-    const [translate2, setTranslate2] = useState ("150px")
-    const [translate3, setTranslate3] = useState ("-150px")
-    const [translate4, setTranslate4] = useState ("300px")
+    const tN300px = "-300px";
+    const t150px = "150px";
+    const t300px = "300px";
+    const [translate1, setTranslate1] = useState()
+    const [translate2, setTranslate2] = useState()
+    const [translate3, setTranslate3] = useState()
+    const [translate4, setTranslate4] = useState()
     const [dayValue, setDayValue] = useState(false)
 
- const isWhite = dayValue ? "#fff" : "transparent" 
-    
-    const classActive = active ? "changePageActive" : "changePage"
-    const classActive2 = active2 ? "changePageActive" : "changePage"
-    const classActive3 = active3 ? "changePageActive" : "changePage"
-    const classActive4 = active4 ? "changePageActive" : "changePage"
+    const isWhite = dayValue ? "#fff" : "transparent" 
 
     const classActive1Card = active ? "menuButtonActive" : ""
     const classActive2Card = active2 ? "arrowButtonActive" : ""
@@ -32,6 +31,93 @@ const Exemplo = () => {
    const line2Opened = isOpened ? "line2Animation" : ""
    const line3Opened = isOpened ? "line3Animation" : ""
     const cssOpened2 = isOpened2 ? "menuOpened2" : "menuClosed"
+
+    function toRight() {
+        if(active){
+            setActive(false)
+            setActive2(true)
+            setActive3(false)
+            setActive4(false)
+            setTranslate4(`translateX(${t300px}) scale(0.8)`)
+                    setTranslate3(`translateX(${tN300px}) scale(1)`)
+                    setTranslate2("translateX(0)")
+                    setTranslate1(`translateX(${t150px}) scale(1)`)
+        } else if(active2){
+            setActive(false)
+            setActive2(false)
+            setActive3(true)
+            setActive4(false)
+            setTranslate4(`translateX(${tN300px}) scale(1)`)
+                    setTranslate3("translateX(0)")
+                    setTranslate2(`translateX(${t150px}) scale(1)`)
+                    setTranslate1(`translateX(${t300px}) scale(0.8)`)
+        }
+        else if(active3){
+            setActive(false)
+            setActive2(false)
+            setActive3(false)
+            setActive4(true)
+            setTranslate4("translateX(0)")
+                    setTranslate3(`translateX(${t150px}) scale(1)`)
+                    setTranslate2(`translateX(${t300px})scale(0.8)`)
+                    setTranslate1(`translateX(${tN300px}) scale(1)`)
+        } else {
+            setActive(true)
+            setActive2(false)
+            setActive3(false)
+            setActive4(false)
+            setTranslate4(`translateX(${t150px}) scale(1)`)
+                    setTranslate3(`translateX(${t300px}) scale(0.8)`)
+                    setTranslate2(`translateX(${tN300px}) scale(1)`)
+                    setTranslate1("translateX(0)")
+        }
+    }
+    function toLeft() {
+        if(active){
+            setActive(false)
+            setActive2(false)
+            setActive3(false)
+            setActive4(true)
+            setTranslate4("translateX(0)")
+            setTranslate3(`translateX(${t150px}) scale(1)`)
+            setTranslate2(`translateX(${t300px}) scale(0.8)`)
+            setTranslate1(`translateX(${tN300px}) scale(1)`)
+        } else if(active2){
+            setActive(true)
+            setActive2(false)
+            setActive3(false)
+            setActive4(false)
+            setTranslate4(`translateX(${t150px}) scale(1)`)
+            setTranslate3(`translateX(${t300px}) scale(0.8)`)
+            setTranslate2(`translateX(${tN300px}) scale(1)`)
+            setTranslate1("translateX(0)")
+        }
+        else if(active3){
+            setActive(false)
+            setActive2(true)
+            setActive3(false)
+            setActive4(false)
+            setTranslate4(`translateX(${t300px}) scale(0.8)`)
+            setTranslate3(`translateX(${tN300px}) scale(1)`)
+            setTranslate2("translateX(0)")
+            setTranslate1(`translateX(${t150px}) scale(1)`)
+        } else {
+            setActive(false)
+            setActive2(false)
+            setActive3(true)
+            setActive4(false)
+            setTranslate4(`translateX(${tN300px}) scale(1)`)
+                setTranslate3("translateX(0)")
+                setTranslate2(`translateX(${t150px} )scale(1)`)
+                setTranslate1(`translateX(${t300px}) scale(0.8)`)
+        }
+    }
+    function allOff() {
+        setActive(false)
+        setActive2(false)
+        setActive3(false)
+        setActive4(false)
+    }
 
     return (
         
@@ -58,47 +144,7 @@ const Exemplo = () => {
         </div>
         <div className="exemplosContainer">
         <svg className="leftArrow"
-        onClick={() => {
-            if(active){
-                setActive(false)
-                setActive2(false)
-                setActive3(false)
-                setActive4(true)
-                setTranslate4("translateX(0)")
-                setTranslate3('translateX(150px) scale(1)')
-                setTranslate2('translateX(300px) scale(0.8)')
-                setTranslate1('translateX(-300px) scale(1)')
-            } else if(active2){
-                setActive(true)
-                setActive2(false)
-                setActive3(false)
-                setActive4(false)
-                setTranslate4('translateX(150px) scale(1)')
-                setTranslate3('translateX(300px) scale(0.8)')
-                setTranslate2('translateX(-300px) scale(1)')
-                setTranslate1("translateX(0)")
-            }
-            else if(active3){
-                setActive(false)
-                setActive2(true)
-                setActive3(false)
-                setActive4(false)
-                setTranslate4('translateX(300px) scale(0.8)')
-                setTranslate3("translateX(-300px) scale(1)")
-                setTranslate2("translateX(0)")
-                setTranslate1("translateX(150px) scale(1)")
-            } else {
-                setActive(false)
-                setActive2(false)
-                setActive3(true)
-                setActive4(false)
-                setTranslate4('translateX(-300px) scale(1)')
-                    setTranslate3("translateX(0)")
-                    setTranslate2('translateX(150px) scale(1)')
-                    setTranslate1('translateX(300px) scale(0.8)')
-            }
-        
-        }} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        onClick={toLeft} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.1787 12.5607C12.7645 11.9749 12.7645 11.0251 12.1787 10.4393L2.63274 0.893398C2.04696 0.307612 1.09721 0.307612 0.511424 0.893398C-0.0743629 1.47918 -0.0743629 2.42893 0.511424 3.01472L8.9967 11.5L0.511424 19.9853C-0.0743629 20.5711 -0.0743629 21.5208 0.511424 22.1066C1.09721 22.6924 2.04696 22.6924 2.63274 22.1066L12.1787 12.5607ZM8.88196 13H11.118V10H8.88196V13Z" fill="#179cc9"/>
 </svg>
 
@@ -174,91 +220,44 @@ const Exemplo = () => {
         <input type="checkbox" className="onOff"/>
 </div>
 <svg className="rightArrow" 
-onClick={() => {
-    if(active){
-        setActive(false)
-        setActive2(true)
-        setActive3(false)
-        setActive4(false)
-        setTranslate4('translateX(300px) scale(0.8)')
-                setTranslate3("translateX(-300px) scale(1)")
-                setTranslate2("translateX(0)")
-                setTranslate1("translateX(150px) scale(1)")
-    } else if(active2){
-        setActive(false)
-        setActive2(false)
-        setActive3(true)
-        setActive4(false)
-        setTranslate4('translateX(-300px) scale(1)')
-                setTranslate3("translateX(0)")
-                setTranslate2('translateX(150px) scale(1)')
-                setTranslate1('translateX(300px) scale(0.8)')
-    }
-    else if(active3){
-        setActive(false)
-        setActive2(false)
-        setActive3(false)
-        setActive4(true)
-        setTranslate4("translateX(0)")
-                setTranslate3('translateX(150px) scale(1)')
-                setTranslate2('translateX(300px) scale(0.8)')
-                setTranslate1('translateX(-300px) scale(1)')
-    } else {
-        setActive(true)
-        setActive2(false)
-        setActive3(false)
-        setActive4(false)
-        setTranslate4('translateX(150px) scale(1)')
-                setTranslate3('translateX(300px) scale(0.8)')
-                setTranslate2('translateX(-300px) scale(1)')
-                setTranslate1("translateX(0)")
-    }
-
-}} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+onClick={toRight} width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.1787 12.5607C12.7645 11.9749 12.7645 11.0251 12.1787 10.4393L2.63274 0.893398C2.04696 0.307612 1.09721 0.307612 0.511424 0.893398C-0.0743629 1.47918 -0.0743629 2.42893 0.511424 3.01472L8.9967 11.5L0.511424 19.9853C-0.0743629 20.5711 -0.0743629 21.5208 0.511424 22.1066C1.09721 22.6924 2.04696 22.6924 2.63274 22.1066L12.1787 12.5607ZM8.88196 13H11.118V10H8.88196V13Z" fill="#179cc9"/>
 </svg>
 </div>
 <div className="navigationContainer">
             <div onClick={() => {
+                allOff()
                 setActive(true)
-                setActive2(false)
-                setActive3(false)
-                    setActive4(false)
-                    setTranslate4('translateX(150px) scale(1)')
-                setTranslate3('translateX(300px) scale(0.8)')
-                setTranslate2('translateX(-300px) scale(1)')
-                setTranslate1("translateX(0)")}} className={classActive}></div>
-                <div  onClick={() => {
-                    setActive2(true)
-                    setActive(false)
-                    setActive3(false)
-                    setActive4(false)
-                    setTranslate4('translateX(300px) scale(0.8)')
-                setTranslate3("translateX(-300px) scale(1)")
-                setTranslate2("translateX(0)")
-                setTranslate1("translateX(150px) scale(1)")
-                    }} className={classActive2}></div>
+                    setTranslate4(`translateX(${t150px}) scale(1)`)
+                setTranslate3(`translateX(${t300px}) scale(0.8)`)
+                setTranslate2(`translateX(${tN300px}) scale(1)`)
+                setTranslate1("translateX(0)")}} > <Dots active={active}/></div>
            
-        <div onClick={() => {
-    setActive(false)
-    setActive2(false)
-    setActive3(true)
-                    setActive4(false)
-                    setTranslate4('translateX(-300px) scale(1)')
-                    setTranslate3("translateX(0)")
-                    setTranslate2('translateX(150px) scale(1)')
-                    setTranslate1('translateX(300px) scale(0.8)')}
-                    } className={classActive3}></div>
                 <div  onClick={() => {
-                    setActive2(false)
-                    setActive(false)
-                    setActive3(false)
+                    allOff()
+        setActive2(true)
+                    setTranslate4(`translateX(${t300px}) scale(0.8)`)
+                setTranslate3(`translateX(${tN300px}) scale(1)`)
+                setTranslate2("translateX(0)")
+                setTranslate1(`translateX(${t150px}) scale(1)`)
+                    }}> <Dots active={active2}/></div>
+           
+   <div onClick={() => {
+       allOff()
+       setActive3(true)
+                    setTranslate4(`translateX(${tN300px}) scale(1)`)
+                    setTranslate3("translateX(0)")
+                    setTranslate2(`translateX(${t150px}) scale(1)`)
+                    setTranslate1(`translateX(${t300px})scale(0.8)`)
+                    }}><Dots active={active3}/></div>
+                <div  onClick={() => {
+                    allOff()
                     setActive4(true)
                     setTranslate4("translateX(0)")
-                    setTranslate3('translateX(150px) scale(1)')
-                    setTranslate2('translateX(300px) scale(0.8)')
-                    setTranslate1('translateX(-300px) scale(1)')
-                }} className={classActive4  }></div>
+                    setTranslate3(`translateX(${t150px}) scale(1)`)
+                    setTranslate2(`translateX(${t300px}) scale(0.8)`)
+                    setTranslate1(`translateX(${tN300px}) scale(1)`)
+                }}><Dots active={active4}/></div>
                 </div>
            
                 {dayValue &&

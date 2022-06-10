@@ -1,8 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #000;
+
   /* color: #fff; */
+}
+body {
+  background-color: #000;
 }
 
 svg, p, h2, span, div {

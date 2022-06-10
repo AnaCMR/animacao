@@ -250,6 +250,7 @@ color: #a5a5a5;
     background-color: #3d3d3d;
     width: 15px;
     height: 15px;
+    cursor: pointer;
 }
 
 .changePageActive{
@@ -257,7 +258,7 @@ color: #a5a5a5;
     background-color: #F41D91;
     width: 15px;
     height: 15px;
-    
+    cursor: pointer;
 }
 
 
