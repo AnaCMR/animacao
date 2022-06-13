@@ -97,10 +97,10 @@ window.addEventListener('scroll', () => {
         <h1>Keyframe!</h1>
         <p>Keyframes são utlizados para criar a animação e a estrutura dele é assim:</p>
         <p> <span className={`${keyframeAnimation1}`}>@keyframes</span> nomeAnimacao {chave1}  </p>
-    <p>0%  <spam className={`${keyframeAnimation2}`}>(from) </spam>{chave1} </p>
+    <p>0%  <span className={`${keyframeAnimation2}`}>(from) </span>{chave1} </p>
         <p> Como vai estar quando começar</p>
         <p> {chave2} </p>
-       <p> 100% <spam className={`${keyframeAnimation2}`}>(to)</spam> {chave1} </p>
+       <p> 100% <span className={`${keyframeAnimation2}`}>(to)</span> {chave1} </p>
             <p>    Como vai estar quando terminar</p>
     <p> {chave2} </p>
     <p>{chave2} </p>
@@ -117,7 +117,7 @@ window.addEventListener('scroll', () => {
 
 <div className="container-conteudo2">
 <h1>Transform!</h1>
-        <p>É com essa propriedade maravilhosa que nós conseguimos mudar a <spam className='rotation'>rotação</spam>, <spam className='position'>posição</spam>, <spam className='escala'>escala</spam> (entre outras muitas coisas) dos elementos. Segue um exemplo de como usar o transform </p>
+        <p>É com essa propriedade maravilhosa que nós conseguimos mudar a <span className='rotation'>rotação</span>, <span className='position'>posição</span>, <span className='escala'>escala</span> (entre outras muitas coisas) dos elementos. Segue um exemplo de como usar o transform </p>
         <p> transform: rotate(45deg) translate(200px, 300px) </p>
 </div>
 </div>

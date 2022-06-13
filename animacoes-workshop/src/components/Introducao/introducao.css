@@ -60,11 +60,15 @@
     width: 100px;
     display: flex;
     justify-self: left;
+    position: absolute;
+    left: 0;
     
 }
 
 .numero3 {
     width: 110px;
+    position: absolute;
+    left: 0;
 }
 
 .numero1-fill, .numero2-fill, .numero3-fill {
@@ -72,27 +76,25 @@
     stroke-dashoffset: 0;
     display: flex;
     justify-self: left;
-    margin-left: -150px;
     visibility: hidden;
+    position: absolute;
+    left: 0;
     
+}
+.numero3-fill {
+    left: 1%;
 }
 
 .numero4-fill{
     visibility: hidden;
-    margin-left: -150px;
     stroke-dasharray: 4700;
     stroke-dashoffset: 0;
 }
 
 .numero5-fill {
     width: 100px;
-    margin-left: -260px;
     stroke-dasharray: 4700;
     stroke-dashoffset: 0;
-}
-
-.numero3-fill {
-    margin-left: -140px;
 }
 
 .numero1-fill-animation, .numero2-fill-animation, .numero3-fill-animation {
@@ -116,15 +118,17 @@
     justify-content: space-around;
     width: 45%;
     line-height: 25px;
+    position: relative;
 }
 
 .conteudo5 {
     text-align: left;
     margin: 10% 0 0 7%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 80%;
     line-height: 25px;
+    position: relative;
 }
 
 
@@ -136,19 +140,21 @@
     justify-content: space-around;
     width: 45%;
     line-height: 25px;
+    position: relative;
+
 }
 
 .container-conteudo1, .container-conteudo2 {
 
     width: 70%;
     height: 60%;
-    margin: 5% 0 0 0 
+    margin: 5% 0 0 4%;
 }
 
 .container-conteudo5 {
     width: 40%;
     height: 60%;
-    margin: 5% 0 0 -8% 
+    margin: 5% 0 0 10%;
 }
 
 .container-conteudo1 h1,.container-conteudo1 p:first-of-type,.container-conteudo2 h1,.container-conteudo2 p:first-of-type,.container-conteudo5 h1 ,.container-conteudo5 p:first-of-type {
@@ -167,7 +173,7 @@
         left: 200px;
         margin-top: 5%;
         transform: rotate(-45deg);
-        width: 20%;
+        width: 280px;
     
 }
 
@@ -175,37 +181,7 @@
     animation: foguete 10s linear 1 forwards;
 }
 
-.blink {
-    right: 340px;
-    /* border: 2px solid blue; */
-    margin-top: 105px;
-    z-index: 1;
-    position: absolute;
-    animation: piscar 1s linear 1s infinite alternate;
 
-}
-
-.arms {
-    right: 468px;
-    margin-top: 5%;
-    position: absolute;
-    animation: moove 0.8s linear infinite alternate;
-}
-.ideia {
-    margin: -3% 0 0 0;
-    right: 480px;
-    position: absolute;
-}
-
-.luz {
-    border-radius: 50%;
-    animation: light 5s linear infinite alternate;
-    margin: -3% 0 0 0;
-    right: 485px;
-    position: absolute;
-    height: 40px;
-    width: 40px;
-}
 
 
 @keyframes bolinha1 {

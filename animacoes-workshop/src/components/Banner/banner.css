@@ -10,16 +10,16 @@
     color: #1d1d1d; 
     margin: 0 auto;
 
-
 }
 
 .errorNumber {
     font-size: 10rem;
-    margin-left: 5%;
+    width:400px;
+    position: relative;
 }
 
 .differentLetter {
-    left: 39%;
+    left: 0;
     position: absolute;
     animation: animate2 1s linear 5s 1 forwards;
     background-color: transparent;

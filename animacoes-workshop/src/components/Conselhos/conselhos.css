@@ -1,6 +1,6 @@
 .conselhos-bg {
     color: #a5a5a5;
-    /* margin-top: 300px; */
+
 }
 
 .conselhos-bg h2 {
@@ -23,14 +23,18 @@
     margin: 2% 10%;
 }
 
-.conselhosLine {
+.conselhosLine1440, .conselhosLine2560, .conselhosLine1024, .conselhosLine768, .conselhosLine425 {
     position: absolute;
     margin: 0 auto;
-    left: 100px;
+    left: 10%;
     stroke-dashoffset: 4000;
     stroke-dasharray: 4000;
+    display: none;
 }
-
+.conselhosContainer {
+    position: relative;
+    height: 160vh;
+}
 .animarConselho{
     stroke-dashoffset: 4000;
     stroke-dasharray: 4000;
@@ -38,14 +42,9 @@
     
 }
 
-.animarCirculo1 {
-    stroke-dashoffset: 4000;
-    stroke-dasharray: 4000;
-}
-.animarCirculo {
-    stroke-dashoffset: 4000;
-    stroke-dasharray: 4000;
-    animation: linhaConselho 20s linear 40s forwards;
+.conselhosLine2560 {
+    stroke-dashoffset: 200;
+    stroke-dasharray: 8000;
 }
 
 .pontos {
@@ -59,10 +58,11 @@
     margin: 11% 17%;
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 500px;
     height: 400px;
     justify-content: space-around;
     text-align: left;
+    position: relative;
 }
 
 .conselhos p::before {
@@ -71,21 +71,19 @@
     height: 15px;
     background-color: #ffff008e;
     position: absolute;
-    left: 200px;
+    left: -30px;
     margin-top: 8px;
-    /* border-radius: 50%; */
 }
 
 .sites {
-    /* border: 2px solid red; */
-    width: 40%;
+    width: 500px;
     height: 350px;
-    position: relative;
-    left: 750px;
+    position: absolute;
     text-align: right;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    right: 15%;
 }
 
 .sites h2 {
@@ -96,10 +94,8 @@
     text-decoration: none;
     color: #a5a5a5;
     font-size: 1.5rem;
-    /* border: 2px solid blue; */
     text-align: left;
-    width: 50%;
-    margin-left: 40%;
+    margin-left: 30px;
 }
     
 
@@ -110,7 +106,7 @@
     height: 15px;
     background-color: #00c3ff8e;
     position: absolute;
-    right: 410px;
+    left: 0px;
     margin-top: 8px;
 }
 
@@ -126,3 +122,30 @@
         stroke-dashoffset: 0;
     }
 }
+
+/* @media (min-width: 425px) and (max-width: 767px){
+    .conselhosLine425 {
+        display: block ;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .conselhosLine768 {
+        display: block ;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px){
+    .conselhosLine1024 {
+        display: block ;
+    } */
+/* } */
+/* @media (min-width: 1440px) and (max-width: 2559px){
+    .conselhosLine1440 {
+        display: block ;
+    }
+ } */
+/*@media (min-width: 2560px){
+    .conselhosLine2560 {
+        display: block ;
+    }
+} */

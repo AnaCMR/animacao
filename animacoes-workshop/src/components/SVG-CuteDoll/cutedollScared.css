@@ -1,21 +1,27 @@
+.containerDollScared {
+    width:330px;
+    height:227px;
+    position: relative;
+    margin-top: -17%;
+    left:5%;
+}
+
 .doll {
     position: absolute;
-    left: 80px;
-    margin-top: -17%;
+    left: 0;
 }
 
 .eyes {
     position: absolute;
-    /* border: 2px solid red; */
-    left: 171px;
-    margin-top: -9.6%;
+    left: 27.4%;
+    top: 47%;
     animation: animateEyes 0.7s linear 1s infinite alternate;
 }
 
 .mouth {
     position: absolute;
-    left: 202px;
-    margin-top: -8.2%;
+    left: 37%;
+    top: 55.5%;
     animation: animateMouth 0.5s linear 1s forwards;
 }
 

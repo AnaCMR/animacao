@@ -4,8 +4,9 @@ import './cutedollScared.css'
 const CuteDollScared = ({isWhiteBG}) => {
 
     const colorLegs = isWhiteBG ? "#000" : "#fff"
+    const visibility = isWhiteBG ? "visible" : "hidden"
     return(
-        <>
+        <div className="containerDollScared" style={{visibility: `${visibility}`}}>
         <svg className="doll" width="330" height="227" viewBox="0 0 330 227" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M104.5 198.5C102 203.5 101.5 213.5 119.5 213.5M119.5 213.5L122 217.5L119.5 225C116.5 224.167 112.3 220.7 119.5 213.5ZM154 198.5C155.5 203.5 151.6 213.5 136 213.5V223.5C138.5 224.667 142 222.3 142 213.5" stroke={`${colorLegs}`} stroke-width="3" stroke-linejoin="round"/>
 <ellipse cx="128.5" cy="100.5" rx="101.5" ry="100.5" fill="#B4E9EC"/>
@@ -35,7 +36,7 @@ const CuteDollScared = ({isWhiteBG}) => {
 <path d="M17 8.5C17 13.1944 13.1944 17 8.5 17C3.80558 17 0 13.1944 0 8.5C0 3.80558 3.80558 0 8.5 0C13.1944 0 17 3.80558 17 8.5Z" fill="#B4E9EC"/>
 </svg>
 </div>
-        </>
+        </div>
     )
 }
 

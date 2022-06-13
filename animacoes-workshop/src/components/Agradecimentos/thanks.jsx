@@ -14,13 +14,11 @@ const Thanks = () => {
 
     return(
         <>
-        <div className='bodyBG'>
         <div className='circle'>
             <div className='circleContainer'>
-            <img src='thanks.png'/>
+            <img src='thanks.png' alt='Muito obrigada'/>
             </div>
         <div className='bg' style={{backgroundSize:  `${100 + (bg - 6000)*2}px`}}></div>
-        </div>
         </div>
         </>
     )

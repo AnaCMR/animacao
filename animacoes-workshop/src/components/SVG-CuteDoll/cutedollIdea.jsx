@@ -3,7 +3,7 @@ import "./cutedollIdea.css"
 
 const CuteDollIdea = () => {
     return(
-        <>
+        <div className="containerDollIdeia">
         <div className="luz"></div>
 <svg className="ideia" width="49" height="62" viewBox="0 0 49 62" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.5414 48.5983L17.4794 46.5983H23.7779H26.2004M26.2004 46.5983H29.1074H30.5609L31.5299 47.5983M26.2004 46.5983V28.0984C27.3317 24.5581 33.8924 19.7676 33.4679 26.0984C33.1102 31.4331 27.9367 34.0555 26.2004 34.5984L21.3554 34.0984C17.9639 32.265 11.9561 27.4983 15.0569 23.0983C18.1577 18.6983 21.1939 26.265 22.3244 30.5983V46.0983" stroke="black" stroke-linejoin="round"/>
@@ -189,7 +189,7 @@ const CuteDollIdea = () => {
 <path d="M92.8701 128.503C93.2767 128.339 93.4785 128.12 93.8587 127.963" stroke="black" stroke-linecap="round"/>
 <path d="M184.051 151.5C191.641 161.5 197.132 168.5 192.772 177.5M192.772 177.5C196.971 179.167 204.206 183.7 199.555 188.5C194.904 193.3 191.48 190.5 190.349 188.5L189.38 185.5L187.927 185L186.473 183.5L188.411 180L192.772 177.5Z" stroke="white" stroke-width="3" stroke-linejoin="round"/>
 </svg>
-        </>
+        </div>
     )
 }
 export default CuteDollIdea;

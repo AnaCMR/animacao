@@ -1,9 +1,4 @@
 .circle {
- position: absolute;
- bottom: 0;
- top: 850vh;
- margin-bottom: 100vh;
- left: 0;
  width: 100%;
  height: 200vh;
 
@@ -11,19 +6,17 @@
 .circle img {
     position: absolute;
     left: 0;
-    width: 70%;
-    /* height: 70%; */
-    margin: 50% 0 0 15%;
-    /* object-fit: cover; */
-    /* border: 2px solid blue; */
+    width: 100%;
+    height: 122%;
+    margin-top:45%;
 }
-/* #414040 */
+
 .bg {
     
     position: absolute;
     width: 100%;
     background: #5e5e5e url(https://www.svgrepo.com/show/127869/circle-moon.svg);
-    height: 100%;
+    height: 200vh;
     background-repeat: no-repeat;
     background-position: 50% 10%;
     background-size: 100px;
@@ -33,12 +26,6 @@
 
  body {
     min-height: 2000px;
-}
-
-.bgBG {
-    background-color: #000;
-    width: 100vw;
-    height: 200vh;
 }
 
 .circleContainer {
